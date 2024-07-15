@@ -9,17 +9,19 @@ html {
 html,
 body {
     scroll-behavior: smooth;
+    background-color: #0a0a14;
+    color: white;
 }
 
 body {
     font-size: 1.6rem;
     font-family: "Lato", sans-serif;
+   
 }
 
 a {
     text-decoration: none;
 }
-
 
 button,
 input,
@@ -43,31 +45,3 @@ select {
     display: inline-block;
 }
 
-.btn--primary {
-    color: #fff;
-    background-color: #ff5b2e;
-    border-radius: 31px;
-    transition: background-color 0.25s ease, color 0.25s ease;
-    border: 1px solid #ff5b2e;
-}
-
-.btn--primary:hover {
-    background-color: #fff;
-    color: #ff5b2e;
-}
-
-.btn__icon {
-    transition: background-color 0.25s ease;
-}
-
-.btn--primary:hover .btn__icon {
-    background-color: #ff5b2e;
-}
-.btn--primary svg {
-    color: #ff5b2e;
-    transition: color 0.25s ease;
-}
-
-.btn--primary:hover svg {
-    color: #fff;
-}
