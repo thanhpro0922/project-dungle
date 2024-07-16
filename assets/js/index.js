@@ -30,7 +30,7 @@ const interval = setInterval(() => {
     if (!pause) {
         moveRight();
     }
-}, 2000);
+}, 3000);
 
 const playPause = () => {
     let button = document.querySelector("[button-click-play]");

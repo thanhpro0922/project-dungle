@@ -1,6 +1,10 @@
 /** Header */
 .header {
     padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background-color: #0a0a14;
 }
 
 .header-inner {
@@ -48,6 +52,20 @@
     position: relative;
 }
 
+.header__nav--item a::after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+    transition: 0.3s;
+}
+
+.header__nav--item a:hover::after {
+    width: calc(100% - 40px);
+}
 /** Hero */
 .hero {
     padding: 100px 0;
@@ -114,7 +132,7 @@
     text-align: justify;
     margin-top: 25px;
     line-height: 1.76;
-    font-weight: 300;
+    font-weight: 400;
     color: #eee;
 }
 
@@ -153,6 +171,178 @@
     position: absolute;
     top: -150px;
     left: 100px;
+    z-index: 1;
+}
+
+.hero-right__decor1 {
+    color: #3de2ff;
+    position: absolute;
+    transition: 0.4s;
+    top: 56px;
+    left: 9px;
+    z-index: 1;
+    animation: changeColorFlower 3s linear infinite;
+}
+
+.hero-right__decor2 {
+    color: #3dffcf;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transition: 0.4s;
+    animation: changeColorFlower 2s linear infinite;
+}
+
+.hero-right__decor3 {
+    position: absolute;
+    top: -30px;
+    left: -30px;
+    animation: scaleStar4 2s linear infinite;
+}
+
+.hero-right__decor4 {
+    position: absolute;
+    top: -93px;
+    left: 600px;
+    animation: scaleStar2 2s linear infinite;
+}
+
+.hero-right__decor5 {
+    position: absolute;
+    top: 100px;
+    left: 150px;
+    animation: scaleStar3 2s linear infinite;
+}
+
+.hero-right__decor6 {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    animation: scaleStar2 2s linear infinite;
+}
+
+.hero-right__decor7 {
+    position: absolute;
+    top: 300px;
+    left: 600px;
+    animation: scaleStar4 2s linear infinite;
+}
+
+.hero-right__decor8 {
+    position: absolute;
+    top: -80px;
+    left: 200px;
+    animation: scaleStar 2s linear infinite;
+}
+
+@keyframes scaleStar {
+    0% {
+        scale: 1.1;
+        color: #3de2ff;
+    }
+    25% {
+        scale: 1.3;
+        color: #3dffcf;
+    }
+    50% {
+        scale: 1.5;
+        color: #ff3d3d;
+    }
+    75% {
+        scale: 1.3;
+        color: #ff3d9f;
+    }
+    100% {
+        scale: 1.1;
+        color: #3d3dff;
+    }
+}
+
+@keyframes scaleStar2 {
+    0% {
+        scale: 1.1;
+        color: #3dffcf;
+    }
+    25% {
+        scale: 1.3;
+        color: #3d3dff;
+    }
+    50% {
+        scale: 1.5;
+        color: #ff3d9f;
+    }
+    75% {
+        scale: 1.3;
+        color: #ff3d3d;
+    }
+    100% {
+        scale: 1.1;
+        color: #3de2ff;
+    }
+}
+
+@keyframes scaleStar3 {
+    0% {
+        scale: 1.1;
+        color: #ff673d;
+    }
+    25% {
+        scale: 1.3;
+        color: #ff3d9f;
+    }
+    50% {
+        scale: 1.5;
+        color: #d2ff3d;
+    }
+    75% {
+        scale: 1.3;
+        color: #3dffcf;
+    }
+    100% {
+        scale: 1.1;
+        color: #ff3db8;
+    }
+}
+
+@keyframes scaleStar4 {
+    0% {
+        scale: 1.1;
+        color: #ff3d54;
+    }
+    25% {
+        scale: 1.3;
+        color: #ff3d9f;
+    }
+    50% {
+        scale: 1.5;
+        color: #3d9eff;
+    }
+    75% {
+        scale: 1.3;
+        color: #b1ff3d;
+    }
+    100% {
+        scale: 1.1;
+        color: #3dffae;
+    }
+}
+
+@keyframes changeColorFlower {
+    0% {
+        color: #3de2ff;
+    }
+    25% {
+        color: #3dffcf;
+    }
+    50% {
+        color: #ff3d3d;
+    }
+    75% {
+        color: #ff3d9f;
+    }
+    100% {
+        color: #3d3dff;
+    }
 }
 
 .hero-btn {
@@ -232,6 +422,8 @@
     transform: rotate(-5deg);
     margin-top: -140px;
     width: 100%;
+    z-index: 2;
+    position: relative;
 }
 
 .hero-end-item {
