@@ -16,7 +16,6 @@ body {
 body {
     font-size: 1.6rem;
     font-family: "Lato", sans-serif;
-   
 }
 
 a {
@@ -45,3 +44,21 @@ select {
     display: inline-block;
 }
 
+.heading {
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 70px;
+    position: relative;
+}
+
+.heading::before {
+    content: "";
+    width: 50px;
+    height: 1.5px;
+    position: absolute;
+    left: -40px;
+    top: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+}
