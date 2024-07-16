@@ -7,14 +7,14 @@ const moveRight = () => {
     i = (i + 1) % slides.length;
     slides[i].className = "slide active";
     let xValue = -150 * i;
-    slider.style.transform = `translatex(${xValue}px)`;
+    slider.style.transform = `translateX(${xValue}px)`;
 };
 const moveLeft = () => {
     slides[i].className = "slide";
     i = (i - 1 + slides.length) % slides.length;
     slides[i].className = "slide active";
     let xValue = -150 * i;
-    slider.style.transform = `translatex(${xValue}px)`;
+    slider.style.transform = `translateX(${xValue}px)`;
 };
 
 const buttonClickRight = document.querySelector("[button-click-right]");
